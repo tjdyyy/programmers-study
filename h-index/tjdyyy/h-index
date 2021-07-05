@@ -1,0 +1,15 @@
+def solution(citations):
+   
+    citations.sort() # 논문의 인용 횟수 오름차순 정렬
+    
+    length = len(citations)
+    
+    for h in citations:
+
+        if (h >= length): # i이상 인용된 논문
+            
+            return length # length번 이상 인용된 논문이 length개. H-index: length
+            
+        length-=1 # length: i이상 인용된 논문 개수 
+    
+    return 0
